@@ -1,3 +1,4 @@
+import { setupZoo } from "./js/setupZoo";
 import "./style.css";
 
 document.querySelector("#app").innerHTML = `
@@ -42,3 +43,11 @@ document.querySelector("#app").innerHTML = `
     </div>
   </div>
 `;
+
+setupZoo({
+  $phrase: document.querySelector("#phrase"),
+  $animals: document.querySelectorAll("[data-type='animal']"),
+  $outputContainer: document.querySelector("#phrase-output"),
+  $animalSelected: document.querySelector("#animal-selected"),
+  $phraseSpoken: document.querySelector("#phrase-spoken"),
+});
